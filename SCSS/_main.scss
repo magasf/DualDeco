@@ -1,0 +1,206 @@
+//Imports
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Poppins:wght@200;300;400&family=Yaldevi:wght@300;400;500&display=swap');
+@import "variables";
+@import "mixins";
+@import "responsive";
+
+
+/*Titulo y logo*/
+.header {
+    background-color: $color4;
+    img{
+        width: 30%;
+        height: 30%;
+    }
+    /*Título*/
+    .slogan{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        font-family: $font-family-1;
+        font-size: 3rem;
+        color: $color2;
+        margin: 25px;
+    }
+    /*Navbar*/
+    .navbar{
+        nav{
+            
+            a{
+                outline: none;
+                color: $color2;
+                text-decoration: none;
+                font-size: 2rem;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                &:hover{
+                    color: $color3;
+                }
+            }
+
+        }
+    }
+    /*Botón para loguear al administrador*/
+    .button__registrarme {
+        margin: 30px; 
+        padding: 20px;  
+        button{
+            color: $color4;
+            background-color: $color1;
+            padding: 15px;
+            border-radius: 25px;
+            border: $color3 solid 2px;
+            a{
+                outline: none;
+                text-decoration: none;
+            }
+            &:hover {
+                color: $color4;
+                background-color: $color2;
+                border: $color2 solid 2px;
+                
+            }
+            
+        }
+    }
+}
+
+/*Formulario de usuario*/
+
+.overlay-2 {
+    background: rgba(0,0,0,.3);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	visibility: hidden;
+}
+
+.overlay-2 .active {
+	visibility: visible;
+}
+
+.usuario{
+    background: $color4;
+    color: $color2;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+    border-radius: 3px;
+    padding: 20px;
+	text-align: center;
+	width: 600px;
+    transition: .3s ease all;
+	transform: scale(0.7);
+    .btn-cerrar-usuario{
+        font-size: 30px;
+        text-decoration: none;
+        outline: none;
+        line-height: 16px;
+        margin: 15px;
+        padding-bottom: 10px;
+        color: #fff;
+        display: block;
+        text-align: right;
+    }
+}
+
+.usuario .btn-cerrar-usuario:hover {
+	color: $color3;
+}
+
+.usuario form .contenedor-inputs input {
+	width: 100%;
+	margin-bottom: 20px;
+	height: 52px;
+	font-size: 18px;
+	line-height: 52px;
+	text-align: center;
+	border: 1px solid #BBBBBB;
+}
+.usuario form .btn-submit {
+	padding: 0 20px;
+	height: 40px;
+	line-height: 40px;
+	border: none;
+	color: #000;
+	background: $color2;
+	border-radius: 3px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: .3s ease all;
+}
+.usuario form .btn-submit:hover {
+	background: rgba(198, 195, 199, 0.9);
+}
+
+
+/* Animaciones */
+
+.usuario.active {	transform: scale(1); opacity: 1; }
+.usaurio.active .contenedor-inputs { animation: entradaInputs 1s linear 1s forwards; }
+
+@keyframes entradaInputs {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+/*Galeria de productos*/
+.productos{
+    display: grid; 
+    grid-auto-flow: row dense; 
+    grid-auto-columns: 1fr;
+    align-content: center;
+    align-items: center; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 20px 20px; 
+    grid-template-areas: 
+      "foto foto foto"
+      "foto foto foto"; 
+    width: 100%; 
+    height: 100%;
+    color: $color4;
+    .foto{
+        
+        img{
+            border: solid 5px $color3;
+            height: 400px;
+            width: 400px;
+        }
+    }
+}
+
+.productos .lightbox img {
+    width: 100%;
+    margin-bottom: 15px;
+    transition: 0.2s ease-in-out;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+    
+}
+
+
+.productos .lightbox img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.productos img {
+    border-radius: 15px;
+}
+
+/*Newsletter*/
+.newsletter {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    background-color: $color4;
+    color: $color2;
+    justify-content: center;
+}
