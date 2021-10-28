@@ -16,17 +16,24 @@
     <div class="header">
         <header>
             <!--Logo-->
-            <div>
+            <div class="logoMenu">
                 <img src="IMG/logo.png" alt="Logo">
-            </div>
-            <div class="slogan" id="divHome">
-                <h1>Tu hogar es tu refugio</h1>
-            </div>
-            <div class="navbar">
-                <nav>
+                <!--Mas adelante será onepage-->
+                <div class="menuFijo">
                     <a href="#divHome">Home</a>
                     <a href="#divProductos">Productos</a>
                     <a href="#divNewsletter">Newsletter</a>
+
+                </div>
+            </div>
+            <div class="slogan" id="divHome">
+                <p>Tu hogar es <span id="retype">tu refugio.</span></p>
+            </div>
+            <div class="navbar">
+                <nav>
+                    <a href="./index.html">HOME</a>
+                    <a href="./Pages/categoria.html">CATEGORIAS</a>
+                    <a href="./Pages/carrito.html">CARRITO</a>
                 </nav>
                 <div class="button__registrarme">
                     <a href="#divRegistro"><button id="btn-abrir-usuario" class="btn-abrir-usuario">Ingresar</button></a>
@@ -68,42 +75,76 @@
     </div>
     <div class="productos" id="divProductos">
         <!--Galeria desplegable-->
-        <div class="foto">
+        <div class="foto" id="Habitacion">
             <a class="lightbox">
                 <img src="IMG/bedroom.jpg" alt="Habitación">
             </a>
             <h2>Habitación</h2>
         </div>
-        <div class="foto">
+        <div class="foto" id="Cocina">
             <a class="lightbox">
                 <img src="IMG/cocina.jpg" alt="Cocina">
             </a>
             <h2>Cocina</h2>
         </div>
-        <div class="foto">
+        <div class="foto" id="Baño">
             <a class="lightbox">
                 <img src="IMG/baño.jpg" alt="Baño">
             </a>
             <h2>Baño</h2>
         </div>
-        <div class="foto">
+        <div class="foto" id="Almohadones">
             <a class="lightbox">
                 <img src="IMG/almohadones4.jpeg" alt="Almohadones">
             </a>
             <h2>Almohadones</h2>
         </div>
-        <div class="foto">
+        <div class="foto" id="Velas">
             <a class="lightbox">
                 <img src="IMG/velas3.jpeg" alt="Velas">
             </a>
             <h2>Velas</h2>
+            <div class="hiddenVelas">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">Frida</h5>
+                      <h6 class="card-subtitle mb-2 text-muted">Velas</h6>
+                      <p class="card-text">$500</p>
+                      <button class="card-link">Comprar</button>
+                      
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title">Tulum</h5>
+                      <h6 class="card-subtitle mb-2 text-muted">Velas</h6>
+                      <p class="card-text">$550</p>
+                      <button class="card-link">Comprar</button>
+                      
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="foto">
+        <div class="foto" id="Accesorios">
             <a class="lightbox">
                 <img src="IMG/repasadores.jpeg" alt="Accesorios">
             </a>
             <h2>Accesorios</h2>
         </div>
+    </div>
+    <div id="productsPrint" class="container-fluid row">
+        <!--
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <h6 class="card-subtitle mb-2 text-muted">Card categoria</h6>
+                  <p class="card-text">Precio</p>
+                  <button class="card-link">Comprar</button>
+                  
+                </div>
+              </div>
+
+        -->
     </div>
     <div class="newsletter" id="divNewsletter">
         <h3>Newsletter</h3>
@@ -124,8 +165,8 @@
             </div>
         </footer>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
-    <script src="JS/Usuario.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="JS/main.js"></script>
 </body>
 </html>

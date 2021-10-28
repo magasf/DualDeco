@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dual Deco</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+    
+</head>
+<body>
+    <!--Header-->
+    <div class="header">
+        <header>
+            <!--Logo-->
+            <div>
+                <img src="../IMG/logo.png" alt="Logo">
+            </div>
+            <div class="slogan" id="divHome">
+                <h1>Tu hogar es tu refugio</h1>
+            </div>
+            <div class="navbar">
+                <nav>
+                    <a href="../index.html">HOME</a>
+                    <a href="./categoria.html">CATEGORIAS</a>
+                    <a href="./carrito.html">CARRITO</a>
+                    <br>
+                    <br>
+
+                    <!--Mas adelante será onepage-->
+                    <a href="#divHome">Home</a>
+                    <a href="#divProductos">Productos</a>
+                    <a href="#divNewsletter">Newsletter</a>
+                    
+                </nav>
+                <div class="button__registrarme">
+                    <a href="#divRegistro"><button id="btn-abrir-usuario" class="btn-abrir-usuario">Ingresar</button></a>
+                </div>
+            </div>
+            <!--Formulario para Ingresar-->
+            <div class="overlay-2 active" id="overlay-2">
+                <div class="usuario" id="usuario">
+                    <a href="#" id="btn-cerrar-usuario" class="btn-cerrar-usuario"><i class="fas fa-times">x</i></a>
+                    <div class="formulario">
+                        <form method="post" class="form">
+                            <div class="contenedor-inputs">
+                                <input class="form--position" type="text" name="nombre" placeholder="Nombre y Apellido" id="name">
+                                <input class="form--position" type="password" name="password" placeholder="password" id="pass">
+                                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">     
+                                    <option selected>Turno de trabajo</option>
+                                    <option value="1">Turno mañana</option>
+                                    <option value="2">Turno siesta</option>
+                                    <option value="3">Turno tarde</option>
+                                </select>
+                            </div>
+                            <input type="submit" class="btn-submit" value="Ingresar">
+                            <!--Por el momento utilizaremos el segundo boton-->
+                            <button><a href="./administrador.html">Ingreso temporal</a></button>
+                                
+                        </form>
+                    </div>
+        
+                </div>
+        
+            </div>
+            
+           
+        </header>
+    </div>
+    <!--Contenido-->
+    <div>
+        <!--Carrusel-->
+    </div>
+    <h3>Carrito</h3>
+    <div>
+        <table id="carrito">
+            <thead>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Eliminar</th>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+    </div>
+
+    <!--Footer-->
+    <div class="footer">
+        <footer>
+            <div>
+                <h4>Contacto</h4>
+
+            </div>
+            <div>
+                <h4>Menu</h4>
+            </div>
+            <div>
+                <h4>Redes Sociales</h4>
+            </div>
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="../JS/carrito.js"></script>
+</body>
+</html>
