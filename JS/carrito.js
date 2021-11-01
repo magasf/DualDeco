@@ -16,9 +16,9 @@ const mostrarCarrito = () => {
     }
     if (carrito.length === 0) {
         contenedor.innerHTML = 
-        '<p class="carritoVacio"> El carrito está vacío</p>';
+        '<p class="carritoVacio">El carrito está vacío</p>';
     } else {
-        carrito.array.forEach((item) => {
+        carrito.forEach((item) => {
             contenedor.innerHTML += `
             <tr>
             <td>

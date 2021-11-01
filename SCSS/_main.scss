@@ -194,6 +194,18 @@
             width: 400px;
         }
     }
+    .hiddenAlmohadones{
+        display: none;
+
+    }
+    .hiddenVelas{
+        display: none;
+
+    }
+    .hiddenAccesorios{
+        display: none;
+
+    }
 }
 
 .productos .lightbox img {
@@ -225,3 +237,22 @@
     color: $color2;
     justify-content: center;
 }
+/*Img products*/
+.fabricaProductos{
+    display: flex;
+    flex-direction: column;
+
+    .contenedorProductos{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        .imgProduct{
+            display: flex;
+                width: 200px;
+                height: 200px;
+            
+        }
+    
+    }
+}
+ 

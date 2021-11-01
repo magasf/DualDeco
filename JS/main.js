@@ -34,8 +34,8 @@ $('#usuario'),
 });
 
 
-$('#btn-cerrar-usuario').on('click', function (event) {
-	event.preventDefault();
+$('#btn-cerrar-usuario').on('click', function (e) {
+	e.preventDefault();
 	$('#overlay-2').removeClass('active');
 	$('#usuario').removeClass('active');
 });
@@ -113,7 +113,7 @@ let retype = {
 		let newWord = this.elem.innerHTML;
 		if( newWord.length > 0 ){
 			newWord = newWord.substring(0, newWord.length - 1);
-			var _this = this;
+			let _this = this;
 			setTimeout( function(){
 				_this.elem.innerHTML = newWord;
 				_this.deleteRepeat();
@@ -151,3 +151,17 @@ let retype = {
 };
 
 retype.start();
+
+/*Productos show*/
+//Preguntar si se puede hacer un switch y que cada vez que presiono una img las demas se oculten
+$("#cajaAlmohadones").on("click", () => {
+	$(".hiddenAlmohadones").slideToggle(2000)
+});
+
+$("#cajaVelas").on("click", () => {
+	$(".hiddenVelas").slideToggle(2000)
+});
+
+$("#cajaAccesorios").on("click", () => {
+	$(".hiddenAccesorios").slideToggle(2000)
+});

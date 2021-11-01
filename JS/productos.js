@@ -9,8 +9,8 @@ const mostrarTodosLosProductos = () => {
     //Por cada producto de data creo etiquetas html y las agrego al contenedor
     productos.forEach((producto) => {
         contenedor.innerHTML += `
-        <div class="card">
-            <img src="${producto.image}" alt="" class="card-img">
+        <div class="card contenedorProductos">
+            <img src="${producto.image}" alt="" class="card-img imgProduct">
             <h3 class="card-title">${producto.nombre}</h3>
             <p>${producto.precio}$</p>
             <button class="button agregar" id=${producto.id}>Agregar al carrito</button>
