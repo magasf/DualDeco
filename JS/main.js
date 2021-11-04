@@ -84,6 +84,7 @@ const confirmacionDeAcceso = () => {
 
 confirmacionDeAcceso()*/
 
+//Slogan con animación
 // OBJECT: 'retype' controls the deletion and creation of new words
 let retype = {
 	// ARRAY: 'retypePhrases' contains the words that will be switched

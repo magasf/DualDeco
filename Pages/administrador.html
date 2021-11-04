@@ -23,7 +23,7 @@
             </div>
             <div class="navbar">
                 <nav>
-                    <a href="../index.html">Home</a>
+                    <a href="../index.html">Volver al inicio</a>
                     
                 </nav>
                 
@@ -31,7 +31,27 @@
            
         </header>
     </div>
-    <div>
+    
+    <div class="ProductsFactory">
+        <h2>Ingresar los articulos</h2>
+        <div>
+            <label>Ingrese los datos del artículo a agregar</label>
+            <form class="NewProductsForm">
+                
+                <input type="text" id="categoria" placeholder="Categoria">
+                <input type="text" id="nombre" placeholder="Nombre">
+                <input type="text" id="precio" placeholder="Precio">
+                <input type="text" id="stock" placeholder="Stock">
+
+            </form>
+            <button id="btn-Agregar">Agregar</button>
+            
+        </div>
+    </div>
+    <div class="newProducts"  id="productsPrint">
+                
+    </div>
+    <div class="adminitratorsFactory">
         <h2>Generar nuevos administradores</h2>
         <div>
             <!--Formulario para Ingresar-->
@@ -52,25 +72,6 @@
                 </form>
             </div>      
         </div>
-    </div>
-    <div>
-        <h2>Ingresar los articulos</h2>
-        <div>
-            <label>Ingrese los datos del artículo a agregar</label>
-            <form>
-                
-                <input type="text" id="categoria" placeholder="Categoria">
-                <input type="text" id="nombre" placeholder="Nombre">
-                <input type="text" id="precio" placeholder="Precio">
-                <input type="text" id="stock" placeholder="Stock">
-
-            </form>
-            <button id="btn-Agregar">Agregar</button>
-            
-        </div>
-    </div>
-    <div id="productsPrint">
-                
     </div>
     
 
