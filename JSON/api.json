@@ -1,0 +1,46 @@
+[
+
+    {
+        "precio": 500,
+        "id": 1,
+        "title": "Frida",
+        "categoria": "Velas"
+        
+    },
+    {
+        "precio": 550,
+        "id": 2,
+        "title": "Tulum",
+        "categoria": "Velas"
+        
+    },
+    {
+        "precio": 500,
+        "id": 3,
+        "title": "Ibiza",
+        "categoria": "Velas"
+        
+    },
+    {
+        "precio": 600,
+        "id": 4,
+        "title": "Lavanda",
+        "categoria": "Velas"
+        
+    },
+    {
+        "precio": 620,
+        "id": 5,
+        "title": "Primavera",
+        "categoria": "Velas"
+        
+    },
+    {
+        "precio": 450,
+        "id": 6,
+        "title": "Coco",
+        "categoria": "Velas"
+        
+    }
+]
+    

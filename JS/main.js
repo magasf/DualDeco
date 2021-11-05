@@ -1,32 +1,9 @@
 
 
 
-//Formulario para ingresar al administrador
-/*
-let btnAbrirUsuario = document.getElementById('btn-abrir-usuario'),
-	overlay = document.getElementById('overlay-2'),
-	usuario = document.getElementById('usuario'),
-	btnCerrarUsuario = document.getElementById('btn-cerrar-usuario');
-
-btnAbrirUsuario.addEventListener('click', function(){
-	overlay.classList.add('active');
-	usuario.classList.add('active');
-});
 
 
-btnCerrarUsuario.addEventListener('click', function(e){
-	e.preventDefault();
-	overlay.classList.remove('active');
-	usuario.classList.remove('active');
-});
 
-*/
-/*
-$('#btn-abrir-usuario'),
-$('#overlay-2'),
-$('#usuario'),
- $('#btn-cerrar-usuario');*/
- 
 //Formulario para ingresar al administrador
  $('#btn-abrir-usuario').on('click', function () {
 	$('#overlay-2').addClass('active');
