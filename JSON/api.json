@@ -1,46 +1,144 @@
 [
 
     {
+        "categoria": "Velas",
+        "nombre": "Frida",
         "precio": 500,
-        "id": 1,
-        "title": "Frida",
-        "categoria": "Velas"
+        "stock": 3,
+        "codigo": 1
         
     },
     {
+        "categoria": "Velas",
+        "nombre": "Tulum",
         "precio": 550,
-        "id": 2,
-        "title": "Tulum",
-        "categoria": "Velas"
-        
+        "stock": 5,
+        "codigo": 2
     },
     {
-        "precio": 500,
-        "id": 3,
-        "title": "Ibiza",
-        "categoria": "Velas"
-        
-    },
-    {
+        "categoria": "Velas",
+        "nombre": "Ibiza",
         "precio": 600,
-        "id": 4,
-        "title": "Lavanda",
-        "categoria": "Velas"
+        "stock": 2,
+        "codigo": 3
         
     },
     {
-        "precio": 620,
-        "id": 5,
-        "title": "Primavera",
-        "categoria": "Velas"
-        
-    },
-    {
+        "categoria": "Velas",
+        "nombre": "Coco",
         "precio": 450,
-        "id": 6,
-        "title": "Coco",
-        "categoria": "Velas"
+        "stock": 9,
+        "codigo": 4
         
+    },
+    {
+        "categoria": "Velas",
+        "nombre": "Primavera",
+        "precio": 500,
+        "stock": 4,
+        "codigo": 5
+        
+    },
+    {
+        "categoria": "Velas",
+        "nombre": "Lavanda",
+        "precio": 600,
+        "stock": 10,
+        "codigo": 6
+        
+    },
+    {
+        "categoria": "Almohadones",
+        "nombre": "Rustico blanco",
+        "precio": 500,
+        "stock": 5,
+        "codigo": 7
+        
+    },
+    {
+        "categoria": "Almohadones",
+        "nombre": "Rustico negro",
+        "precio": 550,
+        "stock": 5,
+        "codigo": 8
+    },
+    {
+        "categoria": "Almohadones",
+        "nombre": "Rustico beige",
+        "precio": 600,
+        "stock": 5,
+        "codigo": 9
+        
+    },
+    {
+        "categoria": "Almohadones",
+        "nombre": "Macrame blanco",
+        "precio": 450,
+        "stock": 5,
+        "codigo": 10
+        
+    },
+    {
+        "categoria": "Almohadones",
+        "nombre": "Macrame negro",
+        "precio": 500,
+        "stock": 5,
+        "codigo": 11
+        
+    },
+    {
+        "categoria": "Almohadones",
+        "nombre": "Bordado lentejuelas",
+        "precio": 500,
+        "stock": 5,
+        "codigo": 12
+        
+    },
+    {
+        "categoria": "Accesorios",
+        "nombre": "Mantel picnic",
+        "precio": 550,
+        "stock": 5,
+        "codigo": 13
+    },
+    {
+        "categoria": "Accesorios",
+        "nombre": "Repasador",
+        "precio": 600,
+        "stock": 5,
+        "codigo": 14
+        
+    },
+    {
+        "categoria": "Accesorios",
+        "nombre": "Set cocina",
+        "precio": 450,
+        "stock": 5,
+        "codigo": 15
+        
+    },
+    {
+        "categoria": "Accesorios",
+        "nombre": "Maceta",
+        "precio": 500,
+        "stock": 5,
+        "codigo": 16
+        
+    },
+    {
+        "categoria": "Accesorios",
+        "nombre": "Alfombra",
+        "precio": 500,
+        "stock": 5,
+        "codigo": 17
+        
+    },
+    {
+        "categoria": "Accesorios",
+        "nombre": "Difusores",
+        "precio": 550,
+        "stock": 5,
+        "codigo": 18
     }
 ]
     
