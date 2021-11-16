@@ -8,6 +8,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito&family=Poppins:wght@200;300;400&family=Yaldevi:wght@300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito&family=Poppins:wght@200;300;400&family=Yaldevi:wght@300;400;500&display=swap");
 @media (min-width: 768px) {
+  .header {
+    background-image: none;
+  }
   .productos {
     display: -ms-grid;
     display: grid;
@@ -65,6 +68,10 @@
 
 @media (min-width: 992px) {
   /*Header*/
+  .header {
+    background-image: url("../IMG/banner.jpg");
+    background-size: 100% 100%;
+  }
   .header .navbar nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -356,116 +363,85 @@
 }
 
 /*Formulario de usuario*/
+/*
 .overlay-2 {
-  background: rgba(0, 0, 0, 0.3);
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  visibility: hidden;
+    background: rgba(0,0,0,.3);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	visibility: hidden;
 }
 
 .overlay-2 .active {
-  visibility: visible;
+	visibility: visible;
 }
 
-.usuario {
-  background: #555555;
-  color: #FBF7F0;
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
-  border-radius: 3px;
-  padding: 20px;
-  text-align: center;
-  width: 600px;
-  -webkit-transition: .3s ease all;
-  transition: .3s ease all;
-  -webkit-transform: scale(0.7);
-          transform: scale(0.7);
-}
-
-.usuario .btn-cerrar-usuario {
-  font-size: 30px;
-  text-decoration: none;
-  outline: none;
-  line-height: 16px;
-  margin: 15px;
-  padding-bottom: 10px;
-  color: #fff;
-  display: block;
-  text-align: right;
+.usuario{
+    background: $color4;
+    color: $color2;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+    border-radius: 3px;
+    padding: 20px;
+	text-align: center;
+	width: 600px;
+    transition: .3s ease all;
+	transform: scale(0.7);
+    .btn-cerrar-usuario{
+        font-size: 30px;
+        text-decoration: none;
+        outline: none;
+        line-height: 16px;
+        margin: 15px;
+        padding-bottom: 10px;
+        color: #fff;
+        display: block;
+        text-align: right;
+    }
 }
 
 .usuario .btn-cerrar-usuario:hover {
-  color: #CDC9C3;
+	color: $color3;
 }
 
 .usuario form .contenedor-inputs input {
-  width: 100%;
-  margin-bottom: 20px;
-  height: 52px;
-  font-size: 18px;
-  line-height: 52px;
-  text-align: center;
-  border: 1px solid #BBBBBB;
+	width: 100%;
+	margin-bottom: 20px;
+	height: 52px;
+	font-size: 18px;
+	line-height: 52px;
+	text-align: center;
+	border: 1px solid #BBBBBB;
 }
-
 .usuario form .btn-submit {
-  padding: 0 20px;
-  height: 40px;
-  line-height: 40px;
-  border: none;
-  color: #000;
-  background: #FBF7F0;
-  border-radius: 3px;
-  font-size: 16px;
-  cursor: pointer;
-  -webkit-transition: .3s ease all;
-  transition: .3s ease all;
+	padding: 0 20px;
+	height: 40px;
+	line-height: 40px;
+	border: none;
+	color: #000;
+	background: $color2;
+	border-radius: 3px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: .3s ease all;
+}
+.usuario form .btn-submit:hover {
+	background: rgba(198, 195, 199, 0.9);
 }
 
-.usuario form .btn-submit:hover {
-  background: rgba(198, 195, 199, 0.9);
-}
 
 /* Animaciones */
-.usuario.active {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  opacity: 1;
-}
-
-.usaurio.active .contenedor-inputs {
-  -webkit-animation: entradaInputs 1s linear 1s forwards;
-          animation: entradaInputs 1s linear 1s forwards;
-}
-
-@-webkit-keyframes entradaInputs {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
+/*
+.usuario.active {	transform: scale(1); opacity: 1; }
+.usaurio.active .contenedor-inputs { animation: entradaInputs 1s linear 1s forwards; }
 
 @keyframes entradaInputs {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+	from { opacity: 0; }
+	to { opacity: 1; }
 }
 
 /*Galeria de productos*/
@@ -560,6 +536,9 @@
     flex-direction: column;
 }*/
 @media (min-width: 768px) {
+  .header {
+    background-image: none;
+  }
   .productos {
     display: -ms-grid;
     display: grid;
@@ -617,6 +596,10 @@
 
 @media (min-width: 992px) {
   /*Header*/
+  .header {
+    background-image: url("../IMG/banner.jpg");
+    background-size: 100% 100%;
+  }
   .header .navbar nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -908,107 +891,85 @@
 }
 
 /*Formulario de usuario*/
+/*
 .overlay-2 {
-  background: rgba(0, 0, 0, 0.3);
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  visibility: hidden;
+    background: rgba(0,0,0,.3);
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	visibility: hidden;
 }
 
 .overlay-2 .active {
-  visibility: visible;
+	visibility: visible;
 }
 
-.usuario {
-  background: #555555;
-  color: #FBF7F0;
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
-  border-radius: 3px;
-  padding: 20px;
-  text-align: center;
-  width: 600px;
-  -webkit-transition: .3s ease all;
-  transition: .3s ease all;
-  -webkit-transform: scale(0.7);
-          transform: scale(0.7);
-}
-
-.usuario .btn-cerrar-usuario {
-  font-size: 30px;
-  text-decoration: none;
-  outline: none;
-  line-height: 16px;
-  margin: 15px;
-  padding-bottom: 10px;
-  color: #fff;
-  display: block;
-  text-align: right;
+.usuario{
+    background: $color4;
+    color: $color2;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
+    border-radius: 3px;
+    padding: 20px;
+	text-align: center;
+	width: 600px;
+    transition: .3s ease all;
+	transform: scale(0.7);
+    .btn-cerrar-usuario{
+        font-size: 30px;
+        text-decoration: none;
+        outline: none;
+        line-height: 16px;
+        margin: 15px;
+        padding-bottom: 10px;
+        color: #fff;
+        display: block;
+        text-align: right;
+    }
 }
 
 .usuario .btn-cerrar-usuario:hover {
-  color: #CDC9C3;
+	color: $color3;
 }
 
 .usuario form .contenedor-inputs input {
-  width: 100%;
-  margin-bottom: 20px;
-  height: 52px;
-  font-size: 18px;
-  line-height: 52px;
-  text-align: center;
-  border: 1px solid #BBBBBB;
+	width: 100%;
+	margin-bottom: 20px;
+	height: 52px;
+	font-size: 18px;
+	line-height: 52px;
+	text-align: center;
+	border: 1px solid #BBBBBB;
 }
-
 .usuario form .btn-submit {
-  padding: 0 20px;
-  height: 40px;
-  line-height: 40px;
-  border: none;
-  color: #000;
-  background: #FBF7F0;
-  border-radius: 3px;
-  font-size: 16px;
-  cursor: pointer;
-  -webkit-transition: .3s ease all;
-  transition: .3s ease all;
+	padding: 0 20px;
+	height: 40px;
+	line-height: 40px;
+	border: none;
+	color: #000;
+	background: $color2;
+	border-radius: 3px;
+	font-size: 16px;
+	cursor: pointer;
+	transition: .3s ease all;
+}
+.usuario form .btn-submit:hover {
+	background: rgba(198, 195, 199, 0.9);
 }
 
-.usuario form .btn-submit:hover {
-  background: rgba(198, 195, 199, 0.9);
-}
 
 /* Animaciones */
-.usuario.active {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  opacity: 1;
-}
-
-.usaurio.active .contenedor-inputs {
-  -webkit-animation: entradaInputs 1s linear 1s forwards;
-          animation: entradaInputs 1s linear 1s forwards;
-}
+/*
+.usuario.active {	transform: scale(1); opacity: 1; }
+.usaurio.active .contenedor-inputs { animation: entradaInputs 1s linear 1s forwards; }
 
 @keyframes entradaInputs {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+	from { opacity: 0; }
+	to { opacity: 1; }
 }
 
 /*Galeria de productos*/
@@ -1119,8 +1080,6 @@
           align-items: center;
   padding: 10px;
   justify-items: center;
-  background-image: url("../IMG/banner.jpg");
-  background-size: 100% 100%;
   /*background-size: cover;*/
   background-color: #555555;
   /*Menu principal*/
@@ -1329,6 +1288,15 @@
 .usaurio.active .contenedor-inputs {
   -webkit-animation: entradaInputs 1s linear 1s forwards;
           animation: entradaInputs 1s linear 1s forwards;
+}
+
+@-webkit-keyframes entradaInputs {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes entradaInputs {

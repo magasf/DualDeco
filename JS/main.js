@@ -64,10 +64,7 @@ confirmacionDeAcceso()*/
 //Slogan con animación
 // OBJECT: 'retype' controls the deletion and creation of new words
 let retype = {
-	// ARRAY: 'retypePhrases' contains the words that will be switched
-	//		  The tool replaces the word contained within the element with the ID of 'retype'
-	//		  It works cleaner if neighboring words have different first letters.
-	//		  Spaces in phrases can cause a hiccup. Best practice to keep phrases as single words.
+	
 	retypePhrases: [
 		'armonia.',
 		'estabilidad.',
