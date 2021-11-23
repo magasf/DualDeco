@@ -1,9 +1,4 @@
 
-
-
-
-
-
 //Formulario para ingresar al administrador
  $('#btn-abrir-usuario').on('click', function () {
 	$('#overlay-2').addClass('active');
