@@ -17,6 +17,10 @@ $('#btn-cerrar-usuario').on('click', function (e) {
 	$('#usuario').removeClass('active');
 });
 
+//Mostrar objetos desde foto
+
+
+
 
 
 //Entidades
@@ -59,7 +63,13 @@ const confirmacionDeAcceso = () => {
 
 }
 
+
 confirmacionDeAcceso()*/
+
+
+
+
+
 
 //Slogan con animación
 // OBJECT: 'retype' controls the deletion and creation of new words
@@ -129,6 +139,7 @@ retype.start();
 
 /*Productos show*/
 //Preguntar si se puede hacer un switch y que cada vez que presiono una img las demas se oculten
+/*
 $("#cajaAlmohadones").on("click", () => {
 	$(".hiddenAlmohadones").slideToggle(2000)
 });
@@ -140,3 +151,4 @@ $("#cajaVelas").on("click", () => {
 $("#cajaAccesorios").on("click", () => {
 	$(".hiddenAccesorios").slideToggle(2000)
 });
+*/

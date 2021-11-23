@@ -38,6 +38,7 @@ const fetchData = async () => {
 }
 
 const pintarCards = data => {
+    
     data.forEach(producto => {
         templateCard.querySelector('h5').textContent = producto.nombre
         templateCard.querySelector('h6').textContent = producto.categoria
@@ -46,13 +47,13 @@ const pintarCards = data => {
         
         const clone = templateCard.cloneNode(true)
         fragment.appendChild(clone)
+       
     })
+    
     cards.appendChild(fragment)
 }
 
 const addCarrito = e => {
-    /*console.log(e.target)
-    console.log(e.target.classList.contains('btn-dark'))*/
     if (e.target.classList.contains('btn-dark')) {
        setCarrito(e.target.parentElement) 
     }

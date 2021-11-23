@@ -5,64 +5,50 @@
 @import "responsive";
 
 
-/*Titulo y logo*/
+
+
+/*Logo, navbar*/
 .header {
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 10px;
     justify-items: center;
-    
-    /*background-size: cover;*/
+    background-size: cover;
     background-color: $color4;
     img{
+        
         opacity: 0.7; 
-        width: 50%;
-        height: 50%;
+        width: 100%;
+        height: 100%;
     }
+
+
     /*Menu principal*/
     .logoMenu{
-        display: flex;
-        flex-direction: column;
+       
         align-items: center;
-        margin-top: 15px;
+        margin-top: 25px;
         
-        .menuFijo{
-            margin-top: 10px;
-            a{
-                outline: none;
-                color: $color2;
-                margin-top: 15px;
-                text-decoration: none;
-                font-size: 1.5rem;
-                padding: 10px;
-                &:hover{
-                    color: $color3;
-                }
-            }
-        }
+        
     }
-    /*Título*/
-    .slogan{
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
-        text-shadow: #000 3px 2px;
-        font-family: $font-family-1;
-        font-size: 3rem;
-        color: $color1;
-        margin: 25px;
-        #retype{
-            color: $color2;
-            border-right: solid 0.1em #fff;
-        }
+    .navbar{
+        visibility: hidden ;
     }
-    /*Menu secundario posiblemente se borre*/
+    
+    
     /*Navbar*/
     .navbar{
         nav{
+            .bolsaCarrito{
+                color: $color2;
+                &:hover{
+                    color: $color3;
+                }
+
+            }
             
             a{
                 outline: none;
@@ -79,29 +65,54 @@
 
         }
     }
-    /*Botón para loguear al administrador*/
-    .button__registrarme {
-        margin: 30px; 
-        padding: 20px;
-        font-family: $font-family-2;  
-        button{
-            color: $color4;
-            background-color: $color1;
-            padding: 15px;
-            border-radius: 50% 20% / 10% 40%;
-            border: $color3 solid 2px;
-            a{
-                outline: none;
-                text-decoration: none;
-            }
-            &:hover {
-                color: $color4;
-                background-color: $color2;
-                border: $color2 solid 2px;
-                
-            }
-            
+    
+}
+.sticky{
+    padding: 5px 100px;
+    background-color: $color4;
+    opacity: none;
+    display: flex;
+    flex-direction: row;
+    .navbar{
+        visibility: visible;
+    }
+    .logoMenu{
+        img{
+            width: 25%;
+            height: 25%;
         }
+        padding-bottom: 20px;
+    }
+
+}
+//Navbar page Administrador
+.navbarAdministrador{
+    
+    color: $color2;
+    a{
+        text-decoration: none;
+        color: $color2;
+        text-align: left;
+        font-size: 2rem;
+        font-family:  $font-family-1;
+
+    }
+}
+/* Frase slogan */
+.slogan{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    font-family: $font-family-1;
+    font-size: 5rem;
+    color: $color1;
+    margin: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    #retype{
+        color: $color4;
+        border-right: solid 0.1em #fff;
     }
 }
 
@@ -134,6 +145,28 @@
 	width: 600px;
     transition: .3s ease all;
 	transform: scale(0.7);
+    button{
+        a{
+            text-decoration: none;
+            color: #000; 
+
+        }
+        padding: 0 20px;
+	    height: 40px;
+	    line-height: 40px;
+        text-decoration: none;
+	    border: none;
+        &:hover{
+            background-color: $color3;
+        }
+	
+	    background: $color2;
+	    border-radius: 3px;
+	    font-size: 16px;
+	    cursor: pointer;
+	    transition: .3s ease all;
+
+    }
     .btn-cerrar-usuario{
         font-size: 30px;
         text-decoration: none;
@@ -188,6 +221,8 @@
 }
 
 /*Galeria de productos*/
+
+
 .productos{
     display: flex;
     flex-direction: column; 
@@ -195,6 +230,8 @@
     width: 100%; 
     height: 100%;
     color: $color4;
+    margin-top: 30px;
+    margin-bottom: 100px;
     font-family: $font-family-3;
     
     .foto{
@@ -259,6 +296,17 @@
     border-radius: 15px;
 }
 
+/*Cards de productos*/
+.activeCards{
+    visibility: hidden;
+}
+
+.carrritoBox{
+    visibility: visible;
+}
+
+
+
 /*Newsletter*/
 .newsletter {
     display: flex;
@@ -292,6 +340,7 @@
 }
 /*Img products*/
 .fabricaProductos{
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
 
@@ -320,6 +369,30 @@
     
     .ico{
         color: #fff;
+    }
+    /*Botón para loguear al administrador*/
+    .button__registrarme {
+        margin: 30px; 
+        padding: 20px;
+        font-family: $font-family-2;  
+        button{
+            color: $color4;
+            background-color: $color1;
+            padding: 15px;
+            border-radius: 50% 20% / 10% 40%;
+            border: $color3 solid 2px;
+            a{
+                outline: none;
+                text-decoration: none;
+            }
+            &:hover {
+                color: $color4;
+                background-color: $color2;
+                border: $color2 solid 2px;
+                
+            }
+            
+        }
     }
 }
     

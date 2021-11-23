@@ -67,12 +67,78 @@
 }
 
 @media (min-width: 992px) {
-  /*Header*/
-  .header {
-    background-image: url("../IMG/banner.jpg");
-    background-size: 100% 100%;
+  * {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
-  .header .navbar nav {
+  body {
+    min-height: 200vh;
+  }
+  /*Header*/
+  header .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+    padding: 40px 100px;
+    z-index: 1000000;
+    background: none;
+  }
+  header .header .logoMenu {
+    position: relative;
+  }
+  header .header .logoMenu img {
+    width: 100%;
+    height: 100%;
+  }
+  header .header .navbar {
+    visibility: hidden;
+  }
+  header .header .navbar nav {
+    position: relative;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .header .navbar nav a {
+    position: relative;
+    margin: 0 15px;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+  }
+  header .sticky {
+    padding: 5px 100px;
+    background-color: #555555;
+    opacity: none;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -81,8 +147,21 @@
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .header .navbar nav a {
-    margin: 20px;
+  header .sticky .navbar {
+    visibility: visible;
+  }
+  header .sticky .logoMenu {
+    padding-bottom: 20px;
+  }
+  header .sticky .logoMenu img {
+    width: 25%;
+    height: 25%;
+  }
+  .banner {
+    background-image: url("../IMG/banner.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
   }
   /*Galeria de productos con grid*/
   body .productos {
@@ -362,179 +441,6 @@
   border: #FBF7F0 solid 2px;
 }
 
-/*Formulario de usuario*/
-/*
-.overlay-2 {
-    background: rgba(0,0,0,.3);
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	align-items: center;
-	justify-content: center;
-	display: flex;
-	visibility: hidden;
-}
-
-.overlay-2 .active {
-	visibility: visible;
-}
-
-.usuario{
-    background: $color4;
-    color: $color2;
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
-    border-radius: 3px;
-    padding: 20px;
-	text-align: center;
-	width: 600px;
-    transition: .3s ease all;
-	transform: scale(0.7);
-    .btn-cerrar-usuario{
-        font-size: 30px;
-        text-decoration: none;
-        outline: none;
-        line-height: 16px;
-        margin: 15px;
-        padding-bottom: 10px;
-        color: #fff;
-        display: block;
-        text-align: right;
-    }
-}
-
-.usuario .btn-cerrar-usuario:hover {
-	color: $color3;
-}
-
-.usuario form .contenedor-inputs input {
-	width: 100%;
-	margin-bottom: 20px;
-	height: 52px;
-	font-size: 18px;
-	line-height: 52px;
-	text-align: center;
-	border: 1px solid #BBBBBB;
-}
-.usuario form .btn-submit {
-	padding: 0 20px;
-	height: 40px;
-	line-height: 40px;
-	border: none;
-	color: #000;
-	background: $color2;
-	border-radius: 3px;
-	font-size: 16px;
-	cursor: pointer;
-	transition: .3s ease all;
-}
-.usuario form .btn-submit:hover {
-	background: rgba(198, 195, 199, 0.9);
-}
-
-
-/* Animaciones */
-/*
-.usuario.active {	transform: scale(1); opacity: 1; }
-.usaurio.active .contenedor-inputs { animation: entradaInputs 1s linear 1s forwards; }
-
-@keyframes entradaInputs {
-	from { opacity: 0; }
-	to { opacity: 1; }
-}
-
-/*Galeria de productos*/
-/*
-.productos{
-    display: flex;
-    flex-direction: column; 
-    /*grid-auto-flow: row dense; 
-    grid-auto-columns: 1fr;
-    align-content: center;
-    align-items: center; 
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 1fr 1fr; 
-    gap: 20px 20px; 
-    grid-template-areas: 
-      "foto foto foto"
-      "foto foto foto"; 
-    width: 100%; 
-    height: 100%;
-    color: $color4;
-    .foto{
-        
-        img{
-            border: solid 5px $color3;
-            height: 400px;
-            width: 400px;
-        }
-    }
-    .hiddenAlmohadones{
-        display: none;
-
-    }
-    .hiddenVelas{
-        display: none;
-
-    }
-    .hiddenAccesorios{
-        display: none;
-
-    }
-}
-
-.productos .lightbox img {
-    width: 100%;
-    margin-bottom: 15px;
-    transition: 0.2s ease-in-out;
-    box-shadow: 0 2px 3px rgba(0,0,0,0.2);
-    
-}
-
-
-.productos .lightbox img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-}
-
-.productos img {
-    border-radius: 15px;
-}*/
-/*Newsletter*/
-/*.newsletter {
-    display: flex;
-    align-content: center;
-    align-items: center;
-    background-color: $color4;
-    color: $color2;
-    justify-content: center;
-}*/
-/*Img products*/
-/*.fabricaProductos{
-    display: flex;
-    flex-direction: column;
-
-    .contenedorProductos{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        .imgProduct{
-            display: flex;
-                width: 200px;
-                height: 200px;
-            
-        }
-    
-    }
-}*/
-/*Footer*/
-/*.footer{
-    display: flex;
-    flex-direction: column;
-}*/
 @media (min-width: 768px) {
   .header {
     background-image: none;
@@ -595,12 +501,78 @@
 }
 
 @media (min-width: 992px) {
-  /*Header*/
-  .header {
-    background-image: url("../IMG/banner.jpg");
-    background-size: 100% 100%;
+  * {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
-  .header .navbar nav {
+  body {
+    min-height: 200vh;
+  }
+  /*Header*/
+  header .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+    padding: 40px 100px;
+    z-index: 1000000;
+    background: none;
+  }
+  header .header .logoMenu {
+    position: relative;
+  }
+  header .header .logoMenu img {
+    width: 100%;
+    height: 100%;
+  }
+  header .header .navbar {
+    visibility: hidden;
+  }
+  header .header .navbar nav {
+    position: relative;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .header .navbar nav a {
+    position: relative;
+    margin: 0 15px;
+    -webkit-transition: 0.6s;
+    transition: 0.6s;
+  }
+  header .sticky {
+    padding: 5px 100px;
+    background-color: #555555;
+    opacity: none;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -609,8 +581,21 @@
         -ms-flex-direction: row;
             flex-direction: row;
   }
-  .header .navbar nav a {
-    margin: 20px;
+  header .sticky .navbar {
+    visibility: visible;
+  }
+  header .sticky .logoMenu {
+    padding-bottom: 20px;
+  }
+  header .sticky .logoMenu img {
+    width: 25%;
+    height: 25%;
+  }
+  .banner {
+    background-image: url("../IMG/banner.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
   }
   /*Galeria de productos con grid*/
   body .productos {
@@ -890,180 +875,7 @@
   border: #FBF7F0 solid 2px;
 }
 
-/*Formulario de usuario*/
-/*
-.overlay-2 {
-    background: rgba(0,0,0,.3);
-	position: fixed;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	align-items: center;
-	justify-content: center;
-	display: flex;
-	visibility: hidden;
-}
-
-.overlay-2 .active {
-	visibility: visible;
-}
-
-.usuario{
-    background: $color4;
-    color: $color2;
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.3);
-    border-radius: 3px;
-    padding: 20px;
-	text-align: center;
-	width: 600px;
-    transition: .3s ease all;
-	transform: scale(0.7);
-    .btn-cerrar-usuario{
-        font-size: 30px;
-        text-decoration: none;
-        outline: none;
-        line-height: 16px;
-        margin: 15px;
-        padding-bottom: 10px;
-        color: #fff;
-        display: block;
-        text-align: right;
-    }
-}
-
-.usuario .btn-cerrar-usuario:hover {
-	color: $color3;
-}
-
-.usuario form .contenedor-inputs input {
-	width: 100%;
-	margin-bottom: 20px;
-	height: 52px;
-	font-size: 18px;
-	line-height: 52px;
-	text-align: center;
-	border: 1px solid #BBBBBB;
-}
-.usuario form .btn-submit {
-	padding: 0 20px;
-	height: 40px;
-	line-height: 40px;
-	border: none;
-	color: #000;
-	background: $color2;
-	border-radius: 3px;
-	font-size: 16px;
-	cursor: pointer;
-	transition: .3s ease all;
-}
-.usuario form .btn-submit:hover {
-	background: rgba(198, 195, 199, 0.9);
-}
-
-
-/* Animaciones */
-/*
-.usuario.active {	transform: scale(1); opacity: 1; }
-.usaurio.active .contenedor-inputs { animation: entradaInputs 1s linear 1s forwards; }
-
-@keyframes entradaInputs {
-	from { opacity: 0; }
-	to { opacity: 1; }
-}
-
-/*Galeria de productos*/
-/*
-.productos{
-    display: flex;
-    flex-direction: column; 
-    /*grid-auto-flow: row dense; 
-    grid-auto-columns: 1fr;
-    align-content: center;
-    align-items: center; 
-    grid-template-columns: 1fr 1fr 1fr; 
-    grid-template-rows: 1fr 1fr; 
-    gap: 20px 20px; 
-    grid-template-areas: 
-      "foto foto foto"
-      "foto foto foto"; 
-    width: 100%; 
-    height: 100%;
-    color: $color4;
-    .foto{
-        
-        img{
-            border: solid 5px $color3;
-            height: 400px;
-            width: 400px;
-        }
-    }
-    .hiddenAlmohadones{
-        display: none;
-
-    }
-    .hiddenVelas{
-        display: none;
-
-    }
-    .hiddenAccesorios{
-        display: none;
-
-    }
-}
-
-.productos .lightbox img {
-    width: 100%;
-    margin-bottom: 15px;
-    transition: 0.2s ease-in-out;
-    box-shadow: 0 2px 3px rgba(0,0,0,0.2);
-    
-}
-
-
-.productos .lightbox img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 15px rgba(0,0,0,0.3);
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
-}
-
-.productos img {
-    border-radius: 15px;
-}*/
-/*Newsletter*/
-/*.newsletter {
-    display: flex;
-    align-content: center;
-    align-items: center;
-    background-color: $color4;
-    color: $color2;
-    justify-content: center;
-}*/
-/*Img products*/
-/*.fabricaProductos{
-    display: flex;
-    flex-direction: column;
-
-    .contenedorProductos{
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        .imgProduct{
-            display: flex;
-                width: 200px;
-                height: 200px;
-            
-        }
-    
-    }
-}*/
-/*Footer*/
-/*.footer{
-    display: flex;
-    flex-direction: column;
-}*/
-/*Titulo y logo*/
+/*Logo, navbar*/
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1080,74 +892,35 @@
           align-items: center;
   padding: 10px;
   justify-items: center;
-  /*background-size: cover;*/
+  background-size: cover;
   background-color: #555555;
   /*Menu principal*/
-  /*Título*/
-  /*Menu secundario posiblemente se borre*/
   /*Navbar*/
-  /*Botón para loguear al administrador*/
 }
 
 .header img {
   opacity: 0.7;
-  width: 50%;
-  height: 50%;
+  width: 100%;
+  height: 100%;
 }
 
 .header .logoMenu {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 15px;
+  margin-top: 25px;
 }
 
-.header .logoMenu .menuFijo {
-  margin-top: 10px;
+.header .navbar {
+  visibility: hidden;
 }
 
-.header .logoMenu .menuFijo a {
-  outline: none;
+.header .navbar nav .bolsaCarrito {
   color: #FBF7F0;
-  margin-top: 15px;
-  text-decoration: none;
-  font-size: 1.5rem;
-  padding: 10px;
 }
 
-.header .logoMenu .menuFijo a:hover {
+.header .navbar nav .bolsaCarrito:hover {
   color: #CDC9C3;
-}
-
-.header .slogan {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-shadow: #000 3px 2px;
-  font-family: "Nunito", sans-serif;
-  font-size: 3rem;
-  color: #D9E4DD;
-  margin: 25px;
-}
-
-.header .slogan #retype {
-  color: #FBF7F0;
-  border-right: solid 0.1em #fff;
 }
 
 .header .navbar nav a {
@@ -1170,29 +943,68 @@
   color: #CDC9C3;
 }
 
-.header .button__registrarme {
-  margin: 30px;
-  padding: 20px;
-  font-family: "Poppins", sans-serif;
+.sticky {
+  padding: 5px 100px;
+  background-color: #555555;
+  opacity: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
-.header .button__registrarme button {
-  color: #555555;
-  background-color: #D9E4DD;
-  padding: 15px;
-  border-radius: 50% 20% / 10% 40%;
-  border: #CDC9C3 solid 2px;
+.sticky .navbar {
+  visibility: visible;
 }
 
-.header .button__registrarme button a {
-  outline: none;
+.sticky .logoMenu {
+  padding-bottom: 20px;
+}
+
+.sticky .logoMenu img {
+  width: 25%;
+  height: 25%;
+}
+
+.navbarAdministrador {
+  color: #FBF7F0;
+}
+
+.navbarAdministrador a {
   text-decoration: none;
+  color: #FBF7F0;
+  text-align: left;
+  font-size: 2rem;
+  font-family: "Nunito", sans-serif;
 }
 
-.header .button__registrarme button:hover {
+/* Frase slogan */
+.slogan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Nunito", sans-serif;
+  font-size: 5rem;
+  color: #D9E4DD;
+  margin: 50px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.slogan #retype {
   color: #555555;
-  background-color: #FBF7F0;
-  border: #FBF7F0 solid 2px;
+  border-right: solid 0.1em #fff;
 }
 
 /*Formulario de Administradores*/
@@ -1232,6 +1044,29 @@
   transition: .3s ease all;
   -webkit-transform: scale(0.7);
           transform: scale(0.7);
+}
+
+.usuario button {
+  padding: 0 20px;
+  height: 40px;
+  line-height: 40px;
+  text-decoration: none;
+  border: none;
+  background: #FBF7F0;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+}
+
+.usuario button a {
+  text-decoration: none;
+  color: #000;
+}
+
+.usuario button:hover {
+  background-color: #CDC9C3;
 }
 
 .usuario .btn-cerrar-usuario {
@@ -1323,6 +1158,8 @@
   width: 100%;
   height: 100%;
   color: #555555;
+  margin-top: 30px;
+  margin-bottom: 100px;
   font-family: "Yaldevi", sans-serif;
 }
 
@@ -1389,6 +1226,15 @@
   border-radius: 15px;
 }
 
+/*Cards de productos*/
+.activeCards {
+  visibility: hidden;
+}
+
+.carrritoBox {
+  visibility: visible;
+}
+
 /*Newsletter*/
 .newsletter {
   display: -webkit-box;
@@ -1433,6 +1279,7 @@
 
 /*Img products*/
 .fabricaProductos {
+  margin-top: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1476,10 +1323,36 @@
   font-size: 1.5rem;
   font-family: "Poppins", sans-serif;
   background-color: #D9E4DD;
+  /*Botón para loguear al administrador*/
 }
 
 .footer .ico {
   color: #fff;
+}
+
+.footer .button__registrarme {
+  margin: 30px;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer .button__registrarme button {
+  color: #555555;
+  background-color: #D9E4DD;
+  padding: 15px;
+  border-radius: 50% 20% / 10% 40%;
+  border: #CDC9C3 solid 2px;
+}
+
+.footer .button__registrarme button a {
+  outline: none;
+  text-decoration: none;
+}
+
+.footer .button__registrarme button:hover {
+  color: #555555;
+  background-color: #FBF7F0;
+  border: #FBF7F0 solid 2px;
 }
 
 /*CSS de fábrica de productos*/
