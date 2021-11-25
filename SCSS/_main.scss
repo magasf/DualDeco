@@ -304,6 +304,26 @@
     visibility: visible;
 }
 
+.btnLight{
+    background-color: $color2;
+    color: $color4;
+    border: $color2;
+    &:hover{
+        background-color: $color1;
+        border: $color1;
+    }
+}
+.btnDark{
+    background-color: $color4;
+    color: $color2;
+    border: $color4;
+    border-radius: 20% 20%;
+    padding: 5px;
+    &:hover{
+        background-color: $color3;
+        border: $color3;
+    }
+}
 
 
 /*Newsletter*/

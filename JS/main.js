@@ -15,9 +15,6 @@ $('#btn-cerrar-usuario').on('click', function (e) {
 //Mostrar objetos desde foto
 
 
-
-
-
 //Entidades
 /*
 class User{

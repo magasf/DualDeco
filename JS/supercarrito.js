@@ -8,6 +8,7 @@ const templateFooter = document.getElementById('template-footer').content
 const templateCarrito = document.getElementById('template-carrito').content
 const fragment = document.createDocumentFragment()
 let carrito = {}
+let totalCompra= 0
 
 
 
@@ -108,6 +109,7 @@ const pintarCarrito = () => {
      
      templateFooter.querySelectorAll('td')[0].textContent = nCantidad
      templateFooter.querySelector('span').textContent = nPrecio
+     totalCompra = nPrecio
 
      const clone = templateFooter.cloneNode(true)
      fragment.appendChild(clone)
@@ -118,8 +120,34 @@ const pintarCarrito = () => {
          carrito = {}
          pintarCarrito()
      })
+
+     const BtnFinalizarCompra = document.getElementById('BtnComprar')
+    BtnFinalizarCompra.addEventListener('click', () => {
+        document.getElementById("BtnComprar").innerHTML += `
+        <div class="modal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                 <div class="modal-header">
+                 <h5 class="modal-title">Modal title</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Modal body text goes here.</p>
+                </div>
+                 <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+                </div>
+            </div>
+        </div>
+        `
+        
+    })
  
 }
+
+    
 const btnAccion = e => {
     if(e.target.classList.contains('btn-info')){
         
@@ -136,5 +164,6 @@ const btnAccion = e => {
         }
         pintarCarrito()
     }
+    
     e.stopPropagation()
 }
