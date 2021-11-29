@@ -1,3 +1,10 @@
+
+
+// VARIABLES
+
+let productsList = [];
+
+
 //ENTIDADES
 
 class ProductsInfo {
@@ -9,11 +16,6 @@ class ProductsInfo {
         this.codigo = codigo;
     }
 }
-
-// VARIABLES
-
-let productsList = [];
-
 
 
 

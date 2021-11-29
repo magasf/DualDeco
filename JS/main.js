@@ -12,7 +12,7 @@ $('#btn-cerrar-usuario').on('click', function (e) {
 	$('#usuario').removeClass('active');
 });
 
-//Mostrar objetos desde foto
+
 
 
 //Entidades
@@ -129,18 +129,3 @@ let retype = {
 
 retype.start();
 
-/*Productos show*/
-//Preguntar si se puede hacer un switch y que cada vez que presiono una img las demas se oculten
-/*
-$("#cajaAlmohadones").on("click", () => {
-	$(".hiddenAlmohadones").slideToggle(2000)
-});
-
-$("#cajaVelas").on("click", () => {
-	$(".hiddenVelas").slideToggle(2000)
-});
-
-$("#cajaAccesorios").on("click", () => {
-	$(".hiddenAccesorios").slideToggle(2000)
-});
-*/

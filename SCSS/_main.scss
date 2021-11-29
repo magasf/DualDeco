@@ -275,6 +275,7 @@
 }
 
 
+
 .productos .lightbox img {
     width: 100%;
     margin-bottom: 15px;
@@ -324,6 +325,27 @@
         border: $color3;
     }
 }
+ 
+/*Modal finalizar compra*/
+dialog {
+    padding: 50px;
+    border-radius: 5px;
+    border: 0;
+      
+      &::backdrop {
+        background: rgba(0, 0, 0, 0.4);
+      }
+      
+      &[open], 
+      &::backdrop {
+          animation: show 500ms ease;
+      }
+  }
+  @keyframes show {
+    0% {
+      opacity: 0;
+    }
+  }
 
 
 /*Newsletter*/
